@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to Relieve Menstrual Pains Quickly — Dr. Grace</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --pink: #e91e8c;
+    --pink-light: #fce4f3;
+    --pink-soft: #fff0f8;
+    --dark: #1a0a12;
+    --text: #3d1a2e;
+    --muted: #8a6070;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+  @keyframes floatBook {
+    0%,100% { transform: perspective(800px) rotateY(-5deg) translateY(0px); }
+    50%      { transform: perspective(800px) rotateY(-5deg) translateY(-10px); }
+  }
+  @keyframes pulse-ring {
+    0%   { box-shadow: 0 0 0 0 rgba(233,30,140,0.4); }
+    70%  { box-shadow: 0 0 0 16px rgba(233,30,140,0); }
+    100% { box-shadow: 0 0 0 0 rgba(233,30,140,0); }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    14%     { transform: scale(1.15); }
+    28%     { transform: scale(1); }
+    42%     { transform: scale(1.1); }
+    56%     { transform: scale(1); }
+  }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes badgePop {
+    0%   { transform: scale(0.8); opacity: 0; }
+    60%  { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes countUp { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes sparkle {
+    0%,100% { opacity: 0; transform: scale(0) rotate(0deg); }
+    50%     { opacity: 1; transform: scale(1) rotate(180deg); }
+  }
+
+  /* Scroll-reveal base */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left {
+    opacity: 0; transform: translateX(-24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+  /* ── STICKY BAR ── */
+  .sticky-bar {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: var(--dark); padding: 12px 20px;
+    display: flex; gap: 10px; z-index: 100;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(.22,1,.36,1);
+  }
+  .sticky-bar.show { transform: translateY(0); }
+  .sticky-bar a {
+    flex: 1; text-align: center; padding: 13px 10px;
+    border-radius: 10px; font-weight: 500; font-size: 14px;
+    text-decoration: none; letter-spacing: 0.3px;
+    transition: transform 0.15s, opacity 0.15s;
+  }
+  .sticky-bar a:active { transform: scale(0.96); opacity: 0.85; }
+  .btn-pay { background: var(--pink); color: var(--white); animation: pulse-ring 2.5s infinite; }
+  .btn-wa  { background: #25D366; color: var(--white); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg,#fce4f3 0%,#fff0f8 50%,#ffd6ef 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+    padding: 50px 24px 40px;
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content:''; position:absolute; top:-80px; right:-80px;
+    width:220px; height:220px; border-radius:50%;
+    background:rgba(233,30,140,0.07);
+    animation: floatBook 6s ease-in-out infinite;
+  }
+  .hero::after {
+    content:'♡'; position:absolute; bottom:20px; left:20px;
+    font-size:60px; color:rgba(233,30,140,0.06);
+    animation: heartbeat 3s ease-in-out infinite;
+  }
+  .badge {
+    display:inline-block; background:var(--dark); color:var(--pink-light);
+    font-size:11px; letter-spacing:2px; text-transform:uppercase;
+    padding:6px 14px; border-radius:20px; margin-bottom:20px;
+    animation: badgePop 0.6s 0.2s both;
+  }
+  .hero h1 {
+    font-family:'Playfair Display',serif; font-size:36px;
+    line-height:1.15; color:var(--dark); margin-bottom:8px;
+    animation: fadeUp 0.7s 0.3s both;
+  }
+  .hero h1 span { color:var(--pink); }
+  .hero .subtitle {
+    font-size:15px; color:var(--muted); margin-bottom:28px;
+    line-height:1.6; max-width:320px; margin-left:auto; margin-right:auto;
+    animation: fadeUp 0.7s 0.45s both;
+  }
+  .book-img {
+    width:220px; margin:0 auto 24px; display:block;
+    border-radius:8px;
+    box-shadow: 0 20px 60px rgba(233,30,140,0.25), 0 8px 20px rgba(0,0,0,0.15);
+    animation: floatBook 5s 0.5s ease-in-out infinite;
+  }
+  .book-fallback {
+    width:220px; height:300px; margin:0 auto 24px;
+    background:linear-gradient(160deg,#e91e8c,#c0145a);
+    border-radius:8px; display:flex; align-items:center;
+    justify-content:center; flex-direction:column; gap:10px; padding:20px;
+    text-align:center;
+    box-shadow: 0 20px 60px rgba(233,30,140,0.3);
+    animation: floatBook 5s 0.5s ease-in-out infinite;
+  }
+  .price-box {
+    background:var(--white); border-radius:16px; padding:20px;
+    margin:0 auto; max-width:320px;
+    box-shadow:0 4px 24px rgba(233,30,140,0.12);
+    animation: fadeUp 0.7s 0.6s both;
+  }
+  .price-old { font-size:14px; color:var(--muted); text-decoration:line-through; margin-bottom:4px; }
+  .price-new {
+    font-family:'Playfair Display',serif; font-size:42px; color:var(--pink);
+    font-weight:900; line-height:1;
+    background: linear-gradient(90deg, #e91e8c, #ff6bb5, #e91e8c);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+  .price-note { font-size:12px; color:var(--muted); margin-top:4px; }
+  .hero-btns { display:flex; flex-direction:column; gap:12px; margin-top:20px; }
+  .hero-btns a {
+    display:block; padding:16px; border-radius:12px;
+    font-size:16px; font-weight:500; text-decoration:none;
+    text-align:center; letter-spacing:0.2px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-btns a:active { transform: scale(0.97); }
+  .btn-primary {
+    background:var(--pink); color:var(--white);
+    box-shadow:0 6px 20px rgba(233,30,140,0.35);
+    animation: pulse-ring 2.5s 1s infinite;
+  }
+  .btn-secondary { background:#25D366; color:var(--white); box-shadow:0 6px 20px rgba(37,211,102,0.3); }
+  .no-spam { font-size:12px; color:var(--muted); margin-top:10px; }
+
+  /* Sparkles */
+  .sparkle {
+    position:absolute; pointer-events:none; font-size:18px;
+    animation: sparkle 3s ease-in-out infinite;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding:48px 24px; }
+  .section-label {
+    font-size:11px; letter-spacing:2.5px; text-transform:uppercase;
+    color:var(--pink); font-weight:500; margin-bottom:10px;
+  }
+  .section-title {
+    font-family:'Playfair Display',serif; font-size:28px;
+    line-height:1.25; color:var(--dark); margin-bottom:8px;
+  }
+  .section-title em { color:var(--pink); font-style:italic; }
+  .section-body { font-size:15px; color:var(--muted); line-height:1.7; margin-bottom:24px; }
+
+  /* ── PAIN POINTS ── */
+  .pain-section { background:var(--dark); }
+  .pain-section .section-label { color:#e991c8; }
+  .pain-section .section-title { color:var(--white); }
+  .pain-section .section-body { color:#c9a0b8; }
+  .pain-items { display:flex; flex-direction:column; gap:14px; }
+  .pain-item {
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px; padding:16px;
+    display:flex; align-items:flex-start; gap:14px;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .pain-item:hover { background:rgba(233,30,140,0.12); transform: translateX(4px); }
+  .pain-num {
+    font-family:'Playfair Display',serif; font-size:24px;
+    color:var(--pink); font-weight:900; line-height:1;
+    flex-shrink:0; width:32px;
+  }
+  .pain-item h4 { font-size:14px; font-weight:500; color:var(--white); margin-bottom:4px; }
+  .pain-item p { font-size:13px; color:#c9a0b8; line-height:1.5; }
+
+  /* ── INSIDE ── */
+  .inside-section { background:var(--pink-soft); }
+  .sections-list { display:flex; flex-direction:column; gap:12px; }
+  .section-card {
+    background:var(--white); border-radius:14px; padding:18px;
+    display:flex; gap:14px; align-items:flex-start;
+    box-shadow:0 2px 12px rgba(233,30,140,0.07);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .section-card:hover { transform: translateY(-3px); box-shadow:0 8px 24px rgba(233,30,140,0.14); }
+  .section-num {
+    font-family:'Playfair Display',serif; font-size:13px;
+    color:var(--pink); font-weight:700; letter-spacing:1px;
+    flex-shrink:0; background:var(--pink-light); border-radius:8px;
+    padding:4px 8px; margin-top:2px;
+  }
+  .section-card h4 { font-size:14px; font-weight:500; color:var(--dark); margin-bottom:4px; line-height:1.4; }
+  .section-card p { font-size:12px; color:var(--muted); line-height:1.5; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section { background:var(--white); }
+  .testimonials { display:flex; flex-direction:column; gap:16px; }
+  .testimonial {
+    background:#fdf5fa; border-radius:16px; padding:20px;
+    border-left:3px solid var(--pink);
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .testimonial:hover { transform: translateX(4px); box-shadow:0 6px 20px rgba(233,30,140,0.1); }
+  .testimonial-text { font-size:14px; line-height:1.7; color:var(--text); font-style:italic; margin-bottom:14px; }
+  .testimonial-author { display:flex; align-items:center; gap:10px; }
+  .avatar {
+    width:36px; height:36px; border-radius:50%;
+    background:var(--pink); color:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:14px; flex-shrink:0;
+  }
+  .author-name { font-size:13px; font-weight:500; color:var(--dark); }
+  .author-role { font-size:11px; color:var(--muted); }
+  .stars { color:#f4c430; font-size:13px; margin-bottom:2px; }
+
+  /* ── FIT SECTION ── */
+  .fit-section { background:var(--pink-soft); }
+  .fit-grid { display:flex; flex-direction:column; gap:16px; margin-top:20px; }
+  .fit-card {
+    background:var(--white); border-radius:14px; padding:18px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.05);
+    transition: transform 0.25s;
+  }
+  .fit-card:hover { transform: translateY(-2px); }
+  .fit-card h4 { font-size:13px; font-weight:600; letter-spacing:0.5px; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .fit-card.yes h4 { color:#0a7c3e; }
+  .fit-card.no h4  { color:#c0392b; }
+  .fit-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .fit-list li { font-size:13px; color:var(--text); line-height:1.5; display:flex; gap:8px; align-items:flex-start; }
+  .fit-icon { flex-shrink:0; font-size:14px; }
+
+  /* ── FAQ ── */
+  .faq-section { background:var(--dark); }
+  .faq-section .section-title { color:var(--white); }
+  .faq-section .section-body { color:#c9a0b8; }
+  .faq-list { display:flex; flex-direction:column; gap:12px; }
+  .faq-item {
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px; overflow:hidden;
+    transition: border-color 0.3s;
+  }
+  .faq-item.open { border-color: rgba(233,30,140,0.4); }
+  .faq-q {
+    padding:16px; font-size:14px; font-weight:500; color:var(--white);
+    cursor:pointer; display:flex; justify-content:space-between;
+    align-items:center; gap:10px; user-select:none;
+  }
+  .faq-icon { color:var(--pink); font-size:20px; flex-shrink:0; transition:transform 0.3s; }
+  .faq-a {
+    padding:0 16px; font-size:13px; color:#c9a0b8; line-height:1.7;
+    max-height:0; overflow:hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  .faq-item.open .faq-a    { max-height:300px; padding:0 16px 16px; }
+  .faq-item.open .faq-icon { transform:rotate(45deg); }
+
+  /* ── ABOUT ── */
+  .about-section { background:var(--white); padding:48px 24px; }
+  .about-card {
+    background:var(--pink-soft); border-radius:20px;
+    padding:28px 20px; text-align:center;
+  }
+  .about-avatar {
+    width:72px; height:72px; border-radius:50%;
+    background:linear-gradient(135deg,var(--pink),#c0145a);
+    color:var(--white); font-family:'Playfair Display',serif;
+    font-size:28px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 14px;
+    box-shadow:0 8px 24px rgba(233,30,140,0.3);
+    animation: heartbeat 3s ease-in-out infinite;
+  }
+  .about-card h3 { font-family:'Playfair Display',serif; font-size:22px; color:var(--dark); margin-bottom:4px; }
+  .about-card .role { font-size:13px; color:var(--pink); margin-bottom:14px; letter-spacing:0.5px; }
+  .about-card p { font-size:14px; color:var(--muted); line-height:1.7; }
+
+  /* ── FINAL CTA ── */
+  .cta-final {
+    background:linear-gradient(145deg,#fce4f3,#fff0f8);
+    background-size:200% 200%;
+    animation: gradientShift 6s ease infinite;
+    text-align:center; padding:48px 24px 100px;
+  }
+  .cta-final .section-title { font-size:28px; margin-bottom:12px; }
+  .cta-final .section-body { max-width:300px; margin:0 auto 28px; }
+  .cta-final .price-box { margin-bottom:20px; }
+  .cta-final-btns { display:flex; flex-direction:column; gap:12px; }
+  .cta-final-btns a {
+    display:block; padding:16px; border-radius:12px;
+    font-size:16px; font-weight:500; text-decoration:none; text-align:center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-final-btns a:active { transform: scale(0.97); }
+  .footer-note { font-size:12px; color:var(--muted); margin-top:16px; }
+
+  /* Progress bar */
+  .progress-bar {
+    position:fixed; top:0; left:0; height:3px;
+    background: linear-gradient(90deg, var(--pink), #ff6bb5);
+    z-index:200; width:0%;
+    transition: width 0.1s linear;
+  }
+
+  /* Delay helpers */
+  .d1 { transition-delay: 0.1s !important; }
+  .d2 { transition-delay: 0.2s !important; }
+  .d3 { transition-delay: 0.3s !important; }
+  .d4 { transition-delay: 0.4s !important; }
+  .d5 { transition-delay: 0.5s !important; }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="sparkle" style="top:15%;left:10%;animation-delay:0s;">✦</span>
+  <span class="sparkle" style="top:25%;right:12%;animation-delay:1s;">✦</span>
+  <span class="sparkle" style="top:60%;left:5%;animation-delay:2s;font-size:12px;">✦</span>
+
+  <div class="badge">Women's Health · 2026 Edition</div>
+  <h1>How to <span>Relieve</span><br>Menstrual Pains<br>Quickly</h1>
+  <p class="subtitle">Practical, Natural & Effective Ways to Find Fast Relief and Feel Like Yourself Again</p>
+
+  <!-- Replace src with your actual hosted book cover URL -->
+  <img class="book-img" src="YOUR_BOOK_COVER_URL_HERE" alt="Book cover"
+    onerror="this.style.display='none'; document.getElementById('book-fb').style.display='flex'"/>
+  <div id="book-fb" class="book-fallback" style="display:none;">
+    <div style="font-size:40px;">📖</div>
+    <div style="font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:700;line-height:1.3;">How to Relieve Menstrual Pains Quickly</div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.7);">Dr. Grace · Women's Health Consultant</div>
+  </div>
+
+  <div class="price-box">
+    <div class="price-old">Regular: ₦5,000</div>
+    <div class="price-new">₦3,500</div>
+    <div class="price-note">One-time · Instant download · No subscription</div>
+    <div class="hero-btns">
+      <a class="btn-primary" href="YOUR_SELAR_LINK_HERE">💳 Buy Now — ₦3,500</a>
+      <a class="btn-secondary" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">💬 Order via WhatsApp</a>
+    </div>
+    <p class="no-spam">🔒 Secure · Instant download · Delivered automatically</p>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain-section">
+  <div class="section-label reveal">The Real Problem</div>
+  <h2 class="section-title reveal d1">You shouldn't have to<br><em>suffer every month.</em></h2>
+  <p class="section-body reveal d2">Menstrual pain is common — but that doesn't mean it's something you have to endure. Most women have tried everything and still dread that time of the month. Here's why.</p>
+  <div class="pain-items">
+    <div class="pain-item reveal d1">
+      <div class="pain-num">01</div>
+      <div><h4>Painkillers only mask the pain</h4><p>They don't fix what's causing it — so it comes back every cycle, sometimes worse.</p></div>
+    </div>
+    <div class="pain-item reveal d2">
+      <div class="pain-num">02</div>
+      <div><h4>You've been told it's "normal"</h4><p>Doctors dismiss it. Family says endure it. But debilitating pain is NOT normal.</p></div>
+    </div>
+    <div class="pain-item reveal d3">
+      <div class="pain-num">03</div>
+      <div><h4>Natural remedies you've tried didn't work</h4><p>Because you didn't have the right ones — or didn't know how to apply them correctly.</p></div>
+    </div>
+    <div class="pain-item reveal d4">
+      <div class="pain-num">04</div>
+      <div><h4>Your hormones are quietly out of balance</h4><p>Diet, stress, and lifestyle worsen your cycle — and nobody told you that.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside-section">
+  <div class="section-label reveal">What Is Inside</div>
+  <h2 class="section-title reveal d1">Everything you need.<br><em>All actionable.</em></h2>
+  <p class="section-body reveal d2">This guide skips the theory. Real solutions, in the right order, starting today.</p>
+  <div class="sections-list">
+    <div class="section-card reveal d1">
+      <div class="section-num">01</div>
+      <div><h4>Why menstrual pain happens — and what yours is telling you</h4><p>Understand root causes so you stop treating symptoms and start fixing the problem.</p></div>
+    </div>
+    <div class="section-card reveal d2">
+      <div class="section-num">02</div>
+      <div><h4>Natural remedies that actually work fast</h4><p>Heat, herbs, pressure points, and more — that bring relief in minutes.</p></div>
+    </div>
+    <div class="section-card reveal d3">
+      <div class="section-num">03</div>
+      <div><h4>Foods that ease pain vs. foods that make it worse</h4><p>A simple, Nigerian-friendly food guide to eat your way to better periods.</p></div>
+    </div>
+    <div class="section-card reveal d4">
+      <div class="section-num">04</div>
+      <div><h4>Hormone-balancing lifestyle habits</h4><p>Small daily changes that reduce cramps, bloating, and mood swings long-term.</p></div>
+    </div>
+    <div class="section-card reveal d5">
+      <div class="section-num">05</div>
+      <div><h4>Self-care practices for your entire cycle</h4><p>What to do before, during, and after your period to feel better every month.</p></div>
+    </div>
+    <div class="section-card reveal d5">
+      <div class="section-num">06</div>
+      <div><h4>When to see a doctor — and what to say</h4><p>Know the signs that need professional attention and how to advocate for yourself.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-label reveal">What Readers Are Saying</div>
+  <h2 class="section-title reveal d1">From women who used to<br><em>dread their period</em></h2>
+  <div class="testimonials" style="margin-top:24px;">
+    <div class="testimonial reveal d1">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I used to miss work every month from the pain. After following the tips in this guide, my last two periods were completely manageable. I can't believe it was this straightforward."</p>
+      <div class="testimonial-author">
+        <div class="avatar">A</div>
+        <div><div class="author-name">Adaeze O.</div><div class="author-role">Teacher, Enugu</div></div>
+      </div>
+    </div>
+    <div class="testimonial reveal d2">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I was skeptical because I've tried everything. But the food section alone changed my cycle. My cramps went from an 8 to a 2. Worth every kobo."</p>
+      <div class="testimonial-author">
+        <div class="avatar">F</div>
+        <div><div class="author-name">Fatima M.</div><div class="author-role">Student, Abuja</div></div>
+      </div>
+    </div>
+    <div class="testimonial reveal d3">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Dr. Grace writes like she actually understands what we go through. This isn't a copy-paste guide. It's specific, real, and it works."</p>
+      <div class="testimonial-author">
+        <div class="avatar">T</div>
+        <div><div class="author-name">Temi A.</div><div class="author-role">Business owner, Lagos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR YOU -->
+<section class="fit-section">
+  <div class="section-label reveal">Is This For You?</div>
+  <h2 class="section-title reveal d1">Be honest<br><em>with yourself.</em></h2>
+  <div class="fit-grid">
+    <div class="fit-card yes reveal d2">
+      <h4>✅ This IS for you if…</h4>
+      <ul class="fit-list">
+        <li><span class="fit-icon">👉</span>Painful cramps affect your work, school, or daily life every month</li>
+        <li><span class="fit-icon">👉</span>You're tired of painkillers and want natural, lasting solutions</li>
+        <li><span class="fit-icon">👉</span>You want to truly understand your body and take control</li>
+        <li><span class="fit-icon">👉</span>You're ready to make small changes for long-term relief</li>
+      </ul>
+    </div>
+    <div class="fit-card no reveal d3">
+      <h4>❌ This is NOT for you if…</h4>
+      <ul class="fit-list">
+        <li><span class="fit-icon">👎</span>You want an overnight magic cure with zero effort</li>
+        <li><span class="fit-icon">👎</span>You'll buy it and never open it</li>
+        <li><span class="fit-icon">👎</span>You have a serious diagnosed condition — see a doctor first</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="section-label reveal">About the Author</div>
+  <div class="about-card reveal d1">
+    <div class="about-avatar">G</div>
+    <h3>Dr. Grace</h3>
+    <div class="role">Women's Health Consultant</div>
+    <p>Written by a women's health consultant who has helped hundreds of women manage menstrual pain naturally. Every tip is practical, safe, and rooted in real experience — not just textbook theory.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-label reveal" style="color:#e991c8;">Common Concerns</div>
+  <h2 class="section-title reveal d1" style="color:#fff;">Questions in<br><em style="color:#e991c8;">your head right now</em></h2>
+  <p class="section-body reveal d2">Every concern is valid. Honest answers — no spin.</p>
+  <div class="faq-list reveal d3">
+    <div class="faq-item">
+      <div class="faq-q">How do I receive the guide after payment? <span class="faq-icon">+</span></div>
+      <div class="faq-a">After payment via Selar, you'll receive an instant download link automatically. For WhatsApp orders, Dr. Grace sends the guide directly once payment is confirmed.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will this work for severe pain? <span class="faq-icon">+</span></div>
+      <div class="faq-a">The guide is designed for common menstrual pain. If your pain could suggest conditions like endometriosis or fibroids, the guide also tells you exactly when and how to see a doctor.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Are the remedies safe with no side effects? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Yes. All remedies are natural and non-prescription, selected for both safety and effectiveness. Specific cautions are noted where relevant.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How quickly will I see results? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Some remedies work within minutes for immediate relief. The lifestyle and dietary changes show the best results after 1–2 cycles when applied consistently.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I pay on WhatsApp instead? <span class="faq-icon">+</span></div>
+      <div class="faq-a">Absolutely. Tap the WhatsApp button and Dr. Grace will walk you through payment and send your guide directly to you.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-final">
+  <span class="sparkle" style="top:10%;left:8%;animation-delay:0.5s;">✦</span>
+  <span class="sparkle" style="top:20%;right:10%;animation-delay:1.5s;">✦</span>
+  <div class="section-label reveal">Get the Guide</div>
+  <h2 class="section-title reveal d1">₦3,500. One guide.<br><em>Better periods — starting now.</em></h2>
+  <p class="section-body reveal d2">Every month you wait is another month of unnecessary pain. Relief is possible. You deserve it. ♡</p>
+  <div class="price-box reveal d3">
+    <div class="price-old">Regular price: ₦5,000</div>
+    <div class="price-new">₦3,500</div>
+    <div class="price-note">One-time · Instant download · No subscription</div>
+  </div>
+  <div class="cta-final-btns reveal d4">
+    <a class="btn-primary" href="YOUR_SELAR_LINK_HERE">💳 Buy Now — ₦3,500</a>
+    <a class="btn-secondary" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">💬 Order via WhatsApp</a>
+  </div>
+  <p class="footer-note">© 2026 Dr. Grace · Women's Health Consultant</p>
+</section>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <a class="btn-pay" href="YOUR_SELAR_LINK_HERE">💳 Buy — ₦3,500</a>
+  <a class="btn-wa" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">💬 WhatsApp</a>
+</div>
+
+<script>
+  // ── Progress bar
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+    bar.style.width = pct + '%';
+  });
+
+  // ── Sticky bar: show after hero
+  const sticky = document.getElementById('stickyBar');
+  const heroH = document.querySelector('.hero').offsetHeight;
+  window.addEventListener('scroll', () => {
+    sticky.classList.toggle('show', window.scrollY > heroH * 0.6);
+  });
+
+  // ── Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
+
+  // ── FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    });
+  });
+
+  // ── Button ripple effect
+  document.querySelectorAll('a').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      const ripple = document.createElement('span');
+      ripple.style.cssText = `
+        position:absolute;width:80px;height:80px;border-radius:50%;
+        background:rgba(255,255,255,0.3);transform:scale(0);
+        animation:ripple 0.5s linear;pointer-events:none;
+        left:${e.offsetX-40}px;top:${e.offsetY-40}px;
+      `;
+      this.style.position = 'relative';
+      this.style.overflow = 'hidden';
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 500);
+    });
+  });
+
+  const style = document.createElement('style');
+  style.textContent = `@keyframes ripple{to{transform:scale(3);opacity:0;}}`;
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
