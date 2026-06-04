@@ -1,0 +1,6 @@
+- [ ] Confirm what “empty section” means in index.html (no placeholders like TODO remain)
+- [ ] Add missing images (replace placeholders for cover image and add a relevant hero/section illustration)
+- [ ] Replace all YOUR_SELAR_LINK_HERE placeholders with working anchors (leave as-is if user wants)
+- [ ] Add basic styling hooks for new images if needed (index.css)
+- [ ] Run a quick local validation (open in browser / ensure no broken JS)
+- [ ] Final review: ensure layout still matches existing responsive grid
