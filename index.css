@@ -286,6 +286,23 @@ section { padding:56px 24px; }
 
 /* -- ABOUT */
 .about-section { background:var(--surface); }
+.about-grid {
+  display:grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 18px;
+  align-items:center;
+}
+.about-art {
+  background: linear-gradient(135deg, #fff0f8, #ffe7f3);
+  border-radius: 24px;
+  padding: 14px;
+  box-shadow: 0 24px 60px rgba(213,25,126,0.06);
+}
+.about-illustration {
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+}
 .about-card {
   background:linear-gradient(135deg,#fff0f8,#ffe7f3);
   border-radius:24px; padding:28px;
@@ -376,6 +393,10 @@ section { padding:56px 24px; }
   .section-title { font-size:2.1rem; }
   .hero-panel { padding:24px; }
   .testimonials, .fit-grid, .sections-list { grid-template-columns:1fr; }
+}
+
+@media (max-width:992px) {
+  .about-grid { grid-template-columns:1fr; }
 }
 
 @media (max-width:680px) {
