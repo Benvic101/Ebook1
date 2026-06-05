@@ -1,6 +1,3 @@
-
-<script>
-  // ── Progress bar
   const bar = document.getElementById('progressBar');
   window.addEventListener('scroll', () => {
     const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
@@ -52,4 +49,3 @@
   const style = document.createElement('style');
   style.textContent = `@keyframes ripple{to{transform:scale(3);opacity:0;}}`;
   document.head.appendChild(style);
-</script>
