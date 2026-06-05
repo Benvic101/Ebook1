@@ -20,6 +20,67 @@ body {
   overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
+.icon {
+  width: 1.1em;
+  height: 1.1em;
+  display: inline-block;
+  vertical-align: text-bottom;
+  stroke: currentColor;
+  fill: none;
+}
+.icon.icon-star {
+  width: 18px;
+  height: 18px;
+}
+.icon.icon-book {
+  width: 1.35em;
+  height: 1.35em;
+}
+.hero-actions a .icon,
+.cta-final-btns a .icon,
+.sticky-bar a .icon {
+  margin-right: 0.6em;
+}
+.fallback-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.stars {
+  display: flex;
+  gap: 4px;
+  color: #ffbf35;
+}
+.faq-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(213,25,126,0.1);
+  color: var(--pink);
+}
+.fit-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: var(--pink);
+  flex-shrink: 0;
+}
+.no-spam svg,
+.fit-list .icon,
+.faq-icon svg {
+  stroke-width: 1.6;
+}
 button, input, a { font: inherit; }
 .progress-bar {
   position: fixed;

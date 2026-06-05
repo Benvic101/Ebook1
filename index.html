@@ -10,6 +10,39 @@
 </head>
 <body>
 
+<svg aria-hidden="true" style="display:none">
+  <symbol id="icon-card" viewBox="0 0 24 24">
+    <rect x="2" y="5" width="20" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <rect x="4" y="9" width="6" height="2" rx="1" fill="currentColor"/>
+    <path d="M4 15h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-chat" viewBox="0 0 24 24">
+    <path d="M4 5.5C4 4.12 5.12 3 6.5 3h11c1.38 0 2.5 1.12 2.5 2.5v9c0 1.38-1.12 2.5-2.5 2.5H7.5L4 20.5V5.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M8 10h8M8 14h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24">
+    <rect x="6" y="11" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="12" cy="15" r="1.2" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24">
+    <path d="M6 4h12a2 2 0 0 1 2 2v14l-6-3-6 3V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 6v12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24">
+    <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24">
+    <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24">
+    <path d="M12 6v12M6 12h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24">
+    <path d="M12 3.25 14.09 8.86 20.18 9.58 15.6 13.73 16.7 19.82 12 16.9 7.3 19.82 8.4 13.73 3.82 9.58 9.91 8.86 12 3.25Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  </symbol>
+</svg>
+
 <div class="progress-bar" id="progressBar"></div>
 <header class="topbar">
   <a class="brand" href="#">Dr. Grace</a>
@@ -34,16 +67,27 @@
       <h1>How to <span>Relieve</span><br>Menstrual Pains<br>Quickly</h1>
       <p class="subtitle">Practical, Natural & Effective Ways to Find Fast Relief and Feel Like Yourself Again</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="https://selar.com/6bo6033n9p">💳 Buy Now — ₦4,000</a>
-        <a class="btn-secondary" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">💬 Order via WhatsApp</a>
+        <a class="btn-primary" href="https://selar.com/6bo6033n9p">
+          <svg class="icon icon-card" aria-hidden="true"><use href="#icon-card"></use></svg>
+          Buy Now — ₦4,000
+        </a>
+        <a class="btn-secondary" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">
+          <svg class="icon icon-chat" aria-hidden="true"><use href="#icon-chat"></use></svg>
+          Order via WhatsApp
+        </a>
       </div>
-      <p class="no-spam">🔒 Secure · Instant download · Delivered automatically</p>
+      <p class="no-spam">
+        <svg class="icon icon-lock" aria-hidden="true"><use href="#icon-lock"></use></svg>
+        Secure · Instant download · Delivered automatically
+      </p>
     </div>
     <div class="hero-panel">
 <img class="book-img" src="images/book-cover.svg" alt="Book cover"
         onerror="this.style.display='none'; document.getElementById('book-fb').style.display='flex'"/>
       <div id="book-fb" class="book-fallback">
-        <div style="font-size:40px;">📖</div>
+        <div class="fallback-icon" aria-hidden="true">
+          <svg class="icon icon-book"><use href="#icon-book"></use></svg>
+        </div>
         <div style="font-family:'Playfair Display',serif;font-size:15px;color:#fff;font-weight:700;line-height:1.3;">How to Relieve Menstrual Pains Quickly</div>
         <div style="font-size:11px;color:rgba(255,255,255,0.7);">Dr. Grace · Women's Health Consultant</div>
       </div>
@@ -120,7 +164,13 @@
   <h2 class="section-title reveal d1">From women who used to<br><em>dread their period</em></h2>
   <div class="testimonials" style="margin-top:24px;">
     <div class="testimonial reveal d1">
-      <div class="stars">★★★★★</div>
+      <div class="stars" aria-hidden="true">
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+      </div>
       <p class="testimonial-text">"I used to miss work every month from the pain. After following the tips in this guide, my last two periods were completely manageable. I can't believe it was this straightforward."</p>
       <div class="testimonial-author">
         <div class="avatar">A</div>
@@ -128,7 +178,13 @@
       </div>
     </div>
     <div class="testimonial reveal d2">
-      <div class="stars">★★★★★</div>
+      <div class="stars" aria-hidden="true">
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+      </div>
       <p class="testimonial-text">"I was skeptical because I've tried everything. But the food section alone changed my cycle. My cramps went from an 8 to a 2. Worth every kobo."</p>
       <div class="testimonial-author">
         <div class="avatar">F</div>
@@ -136,7 +192,13 @@
       </div>
     </div>
     <div class="testimonial reveal d3">
-      <div class="stars">★★★★★</div>
+      <div class="stars" aria-hidden="true">
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+        <svg class="icon icon-star"><use href="#icon-star"></use></svg>
+      </div>
       <p class="testimonial-text">"Dr. Grace writes like she actually understands what we go through. This isn't a copy-paste guide. It's specific, real, and it works."</p>
       <div class="testimonial-author">
         <div class="avatar">T</div>
@@ -154,18 +216,18 @@
     <div class="fit-card yes reveal d2">
       <h4>✅ This IS for you if…</h4>
       <ul class="fit-list">
-        <li><span class="fit-icon">👉</span>Painful cramps affect your work, school, or daily life every month</li>
-        <li><span class="fit-icon">👉</span>You're tired of painkillers and want natural, lasting solutions</li>
-        <li><span class="fit-icon">👉</span>You want to truly understand your body and take control</li>
-        <li><span class="fit-icon">👉</span>You're ready to make small changes for long-term relief</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-arrow"><use href="#icon-arrow"></use></svg></span>Painful cramps affect your work, school, or daily life every month</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-arrow"><use href="#icon-arrow"></use></svg></span>You're tired of painkillers and want natural, lasting solutions</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-arrow"><use href="#icon-arrow"></use></svg></span>You want to truly understand your body and take control</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-arrow"><use href="#icon-arrow"></use></svg></span>You're ready to make small changes for long-term relief</li>
       </ul>
     </div>
     <div class="fit-card no reveal d3">
       <h4>❌ This is NOT for you if…</h4>
       <ul class="fit-list">
-        <li><span class="fit-icon">👎</span>You want an overnight magic cure with zero effort</li>
-        <li><span class="fit-icon">👎</span>You'll buy it and never open it</li>
-        <li><span class="fit-icon">👎</span>You have a serious diagnosed condition — see a doctor first</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-close"><use href="#icon-close"></use></svg></span>You want an overnight magic cure with zero effort</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-close"><use href="#icon-close"></use></svg></span>You'll buy it and never open it</li>
+        <li><span class="fit-icon" aria-hidden="true"><svg class="icon icon-close"><use href="#icon-close"></use></svg></span>You have a serious diagnosed condition — see a doctor first</li>
       </ul>
     </div>
   </div>
@@ -229,8 +291,14 @@
     <div class="price-note">One-time · Instant download · No subscription</div>
   </div>
   <div class="cta-final-btns reveal d4">
-    <a class="btn-primary" href="https://selar.com/6bo6033n9p">💳 Buy Now — ₦5,500</a>
-    <a class="btn-secondary" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">💬 Order via WhatsApp</a>
+    <a class="btn-primary" href="https://selar.com/6bo6033n9p">
+      <svg class="icon icon-card" aria-hidden="true"><use href="#icon-card"></use></svg>
+      Buy Now — ₦5,500
+    </a>
+    <a class="btn-secondary" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">
+      <svg class="icon icon-chat" aria-hidden="true"><use href="#icon-chat"></use></svg>
+      Order via WhatsApp
+    </a>
   </div>
   <p class="footer-note">© 2026 Dr.Grace · Women's Health Consultant</p>
 </section>
@@ -238,8 +306,14 @@
 
 <!-- STICKY BAR -->
 <div class="sticky-bar" id="stickyBar">
-  <a class="btn-pay" href="https://selar.com/6bo6033n9p">💳 Buy — ₦4,000</a>
-  <a class="btn-wa" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">💬 WhatsApp</a>
+  <a class="btn-pay" href="https://selar.com/6bo6033n9p">
+    <svg class="icon icon-card" aria-hidden="true"><use href="#icon-card"></use></svg>
+    Buy — ₦4,000
+  </a>
+  <a class="btn-wa" href="https://wa.me/2349017843909?text=Hi%20Dr.%20Grace%2C%20I%20want%20to%20order%20the%20Menstrual%20Pain%20Relief%20guide%20for%20%E2%82%A63%2C500">
+    <svg class="icon icon-chat" aria-hidden="true"><use href="#icon-chat"></use></svg>
+    WhatsApp
+  </a>
 </div>
 
 <script src="index.js"></script>
